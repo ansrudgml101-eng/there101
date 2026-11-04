@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c162a">
+  <meta name="description" content="천안시 지방세 세입 증대 추진전략 — 12장 인터랙티브 웹 프레젠테이션">
+  <title>천안시 지방세 세입 증대 추진전략 | 웹 프레젠테이션</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="slides-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="topbar">
+      <a class="brand" href="#slide-1" aria-label="첫 슬라이드로 이동"><span class="brand-emblem" aria-hidden="true">C</span><span><strong>CHEONAN CITY</strong><small>LOCAL TAX STRATEGY</small></span></a>
+      <div class="top-center"><span class="eyebrow">정책제안형 보고</span><span class="top-title" id="topTitle">천안시 지방세 세입 증대 추진전략</span></div>
+      <div class="top-actions">
+        <button class="icon-btn" id="outlineBtn" title="전체 슬라이드 보기 (G)" aria-label="전체 슬라이드 보기">▦</button>
+        <button class="icon-btn" id="notesBtn" title="발표자 메모 (N)" aria-label="발표자 메모 보기">☷</button>
+        <button class="icon-btn" id="fullscreenBtn" title="전체화면 (F)" aria-label="전체화면 전환">⛶</button>
+      </div>
+    </header>
+    <main class="main">
+      <aside class="sidebar" id="sidebar" aria-label="슬라이드 목차">
+        <div class="sidebar-head"><span>CONTENTS</span><span>12 SLIDES</span></div>
+        <nav class="slide-nav" id="slideNav"></nav>
+        <div class="sidebar-bottom"><span class="status-dot"></span>원본 슬라이드 기반<br><small>원본의 확인 필요 항목 유지</small></div>
+      </aside>
+      <section class="workspace" aria-label="프레젠테이션 뷰어">
+        <div class="stage-top"><div class="stage-current"><span class="mini-line"></span><span id="sectionLabel">표지</span></div><span class="stage-count"><b id="currentNumber">01</b><span> / 12</span></span></div>
+        <div class="stage-viewport" id="stageViewport" tabindex="0" aria-label="슬라이드 영역. 좌우 화살표로 이동할 수 있습니다.">
+          <div class="slide-frame" id="slideFrame"><img id="slideImage" src="assets/slide-01.png" alt="천안시 지방세 세입 증대 추진전략 표지" draggable="false"><span class="slide-shimmer" aria-hidden="true"></span></div>
+          <div class="swipe-tip" id="swipeTip">← 좌우로 넘겨보세요 →</div>
+        </div>
+        <div class="bottom-bar"><div class="bottom-left"><span class="live-badge"><span class="status-dot"></span> PRESENTATION</span><span class="keyboard-hint">← → 이동 · G 전체 보기 · F 전체화면</span></div><div class="controls"><button id="prevBtn" class="nav-btn" aria-label="이전 슬라이드">←</button><div class="progress-holder"><span id="progressText">01 <em>/ 12</em></span><div class="progress-track"><div id="progressFill"></div></div></div><button id="nextBtn" class="nav-btn primary" aria-label="다음 슬라이드">→</button></div></div>
+      </section>
+    </main>
+    <div id="overview" class="overlay" role="dialog" aria-modal="true" aria-label="슬라이드 전체 보기" aria-hidden="true"><div class="overlay-panel overview-panel"><div class="panel-header"><div><span class="eyebrow">SLIDE EXPLORER</span><h2>전체 슬라이드</h2></div><button class="close-btn" data-close="overview" aria-label="닫기">✕</button></div><div class="search-wrap"><span aria-hidden="true">⌕</span><input type="search" id="searchInput" placeholder="제목이나 슬라이드 내용 검색" aria-label="슬라이드 검색"></div><div id="overviewGrid" class="overview-grid"></div></div></div>
+    <div id="notes" class="overlay" role="dialog" aria-modal="true" aria-label="발표자 메모" aria-hidden="true"><div class="overlay-panel notes-panel"><div class="panel-header"><div><span class="eyebrow">PRESENTER NOTES</span><h2 id="notesTitle">발표자 메모</h2></div><button class="close-btn" data-close="notes" aria-label="닫기">✕</button></div><div class="notes-body"><h3 id="notesSlideTitle"></h3><p id="notesText"></p><details><summary>슬라이드 전체 텍스트 확인</summary><pre id="slideText"></pre></details><div class="note-disclaimer">원본의 공식 실적 미확인 수치 및 목표치는 추가 확인이 필요합니다.</div></div></div></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+</html>
